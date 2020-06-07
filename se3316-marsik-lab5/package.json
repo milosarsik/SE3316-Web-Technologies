@@ -1,0 +1,30 @@
+{
+  "name": "se3316-marsik-lab5",
+  "version": "1.0.0",
+  "description": "Lab 5 for SE 3316A.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milosarsik/se3316-marsik-lab5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milosarsik/se3316-marsik-lab5/issues"
+  },
+  "homepage": "https://github.com/milosarsik/se3316-marsik-lab5#readme",
+  "dependencies": {
+    "argon2": "^0.25.1",
+    "argon2-ffi": "^1.1.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.13"
+  }
+}

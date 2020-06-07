@@ -1,0 +1,13 @@
+<h2>Register</h2>
+
+<div>
+    <input type="email" required = true placeHolder = "Email" [(ngModel)] = "email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" email>
+</div>
+<div>
+    <input type="text"  placeHolder = "Password" [(ngModel)] = "password">
+</div>
+<div>
+    <button (click)="createUser()">Register</button>
+</div>
+
+<p>Response: {{response}}</p>

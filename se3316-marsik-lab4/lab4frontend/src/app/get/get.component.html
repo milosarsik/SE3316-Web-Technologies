@@ -1,0 +1,13 @@
+<p>get works!</p>
+
+<h1>Items</h1>
+
+<ul *ngIf="items">
+  <li *ngFor="let item of items">
+    <p>Name: {{ item.name }}</p>
+    <p>Type: {{ item.type }}</p>
+    <p>Loan Period: {{ item.loanPeriod }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+    <p>Id: {{ item._id }}</p>
+  </li>
+</ul>

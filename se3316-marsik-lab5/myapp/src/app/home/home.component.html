@@ -1,0 +1,29 @@
+<h1>Welcome!</h1>
+
+<div class="play-container">
+    <h2>About Us</h2>
+    <p>Welcome to Song IMDB. A website for all things musical. Create an account with us, find reviews and keep track of the top songs across the world.</p>
+</div>
+
+<div class="play-container">
+    <h2>Trending Top 10</h2>
+    <ul *ngIf="songs">
+        <div *ngFor="let song of songs;" >
+            <div class="row">
+                <div class="card">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                            {{ song.title }}
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                          <mat-panel-description>
+                            <p>{{ song | json}}</p>
+                        </mat-panel-description>
+                  </mat-expansion-panel>
+                </div>
+            </div>
+        </div>
+    </ul>
+</div> 
+

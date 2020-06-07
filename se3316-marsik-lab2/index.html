@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SE 3316 - Lab 2</title>
+    <meta charset="UTF-8">
+    <script type='text/javascript' src='script.js'></script>
+</head>
+
+<body>
+    <h1>User Information</h1>
+
+    <div id="loginForm">
+        <label for="name" id="nameLabel">Name:</label>
+        <input type="text" id="name" onkeydown="maxChars(this);" onkeyup="maxChars(this);">
+
+        <label for="email" id="emailLabel">Email:</label>
+        <input type="email" id="email">
+
+        <label for="birth-year" id="birthYearLabel">Year of birth:</label>
+        <input type="number" id="birth-year" min="1900" max="2019">
+
+        <button id="formButton" onClick="replaceContent()">Submit</button>
+    </div>
+
+    <h1>Library Checkout</h1>
+
+    <button onClick="englishLanguage()">English</button>
+    <button onClick="serbianLanguage()">Serbian</button>
+
+    <div id="newitemdiv"></div>
+
+    <h2>Items Available:</h2>
+
+    <ol id="available-items">
+        <li id="inSearchOfLostTimeList">
+            <h3 id="inSearchOfLostTimeString">In Search Of Lost Time by Marcel Proust</h3>
+            <img src="images/insearchoflosttime.jpg" alt="In Search Of Lost Time by Marcel Proust" height="160"
+                width="100">
+            <p id="inSearchOfLostTimeDue">Due in 30 Days</p>
+            <button id="inSearchOfLostTime" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="ulyssesList">
+            <h3 id="ulyssesString">Ulysses by James Joyce</h3>
+            <img src="images/ulysses.jpg" alt="Ulysses by James Joyce" height="160" width="100">
+            <p id="ulyssesDue">Due in 30 Days</p>
+            <button id="ulysses" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="donQuixoteList">
+            <h3 id="donQuixoteString">Don Quixote by Miguel de Cervantes</h3>
+            <img src="images/donquixote.jpg" alt="Don Quixote by Miguel de Cervantes" height="160" width="100">
+            <p id="donQuixoteDue">Due in 30 Days</p>
+            <button id="donQuixote" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="theGreatGatsbyList">
+            <h3 id="theGreatGatsbyString">The Great Gatsby by F. Scott Fitzgerald</h3>
+            <img src="images/thegreatgatsby.jpg" alt="The Great Gatsby by F. Scott Fitzgerald" height="160" width="100">
+            <p id="theGreatGatsbyDue">Due in 30 Days</p>
+            <button id="theGreatGatsby" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="mobyDickList">
+            <h3 id="mobyDickString">Moby Dick by Herman Melville</h3>
+            <img src="images/mobydick.jpg" alt="Moby Dick by Herman Melville" height="160" width="100">
+            <p id="mobyDickDue">Due in 30 Days</p>
+            <button id="mobyDick" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="oneHundredYearsOfSolitudeList">
+            <h3 id="oneHundredYearsOfSolitudeString">One Hundred Years Of Solitude by Gabriel Garcia Marquez</h3>
+            <img src="images/onehundredyearsofsolitude.jpg"
+                alt="One Hundred Years Of Solitude by Gabriel Garcia Marquez" height="160" width="100">
+            <p id="oneHundredYearsOfSolitudeDue">Due in 30 Days</p>
+            <button id="oneHundredYearsOfSolitude" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="warAndPeaceList">
+            <h3 id="warAndPeaceString">War and Peace by Leo Tolstoy</h3>
+            <img src="images/warandpeace.jpg" alt="War and Peace by Leo Tolstoy" height="160" width="100">
+            <p id="warAndPeaceDue">Due in 30 Days</p>
+            <button id="warAndPeace" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="hamletList">
+            <h3 id="hamletString">Hamlet by William Shakespeare</h3>
+            <img src="images/hamlet.jpg" alt="Hamlet by William Shakespeare" height="160" width="100">
+            <p id="hamletDue">Due in 30 Days</p>
+            <button id="hamlet" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="lolitaList">
+            <h3 id="lolitaString">Lolita by Vladimir Nabokov</h3>
+            <img src="images/lolita.jpg" alt="Lolita by Vladimir Nabokov" height="160" width="100">
+            <p id="lolitaDue">Due in 30 Days</p>
+            <button id="lolita" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="theOdysseyList">
+            <h3 id="theOdysseyString">The Odyssey by Homer</h3>
+            <img src="images/theodyssey.jpg" alt="The Odyssey by Homer" height="160" width="100">
+            <p id="theOdysseyDue">Due in 30 Days</p>
+            <button id="theOdyssey" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="ledZeppelinIVList">
+            <h3 id="ledZeppelinIVString">Led Zeppelin IV by Led Zeppelin</h3>
+            <img src="images/ledzeppelinIV.jpg" alt="Led Zeppelin IV by Led Zeppelin" height="160" width="160">
+            <p id="ledZeppelinDue">Due in 10 Days</p>
+            <button id="ledZeppelinIV" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="nevermindList">
+            <h3 id="nevermindString">Nevermind by Nirvana</h3>
+            <img src="images/nevermind.jpg" alt="Nevermind by Nirvana" height="160" width="160">
+            <p id="nevermindDue">Due in 10 Days</p>
+            <button id="nevermind" onClick="addItem(this.id)">Add</button>
+        </li>
+        <li id="backInBlackList">
+            <h3 id="backInBlackString">Back In Black by AC/DC</h3>
+            <img src="images/backinblack.jpg" alt="Back In Black by AC/DC" height="160" width="160">
+            <p id="backInBlackDue">Due in 10 Days</p>
+            <button id="backInBlack" onClick="addItem(this.id)">Add</button>
+        </li>
+
+    </ol>
+
+    <h2>Checkout List:</h2>
+
+    <button id="checkoutButton" onClick="checkout()">Checkout</button>
+
+    <ol id="basket"></ol>
+</body>
+</html>

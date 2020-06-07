@@ -1,0 +1,14 @@
+<h2>Log In</h2>
+
+<div>
+    <input type="email" required = true placeHolder = "Email" [(ngModel)] = "email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" email>
+</div>
+<div>
+    <input type="text"  placeHolder = "Password" [(ngModel)] = "password">
+</div>
+<div>
+    <button (click)="verifyLogin()">Log In</button>
+</div>
+
+<p> Want access? <a href="/register">Register</a></p>
+<p>Response: {{response}}</p>
